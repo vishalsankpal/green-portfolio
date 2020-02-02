@@ -1,0 +1,24 @@
+/*------color-------*/
+$theme_green_color:#02d871;
+$white:#fff;
+$button-hover:#222;
+
+/*-----breakpoint--------*/
+$large-device:992px;
+$mobile-device:768px;
+$small-device:475px;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background: $theme_green_color;
+    color: $white;
+}

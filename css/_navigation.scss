@@ -1,0 +1,52 @@
+.navbar-light {
+    .navbar-brand {
+        @include greenColor(color, $theme_green_color);
+
+        &:hover {
+            @include greenColor(color, $button-hover);
+        }
+    }
+
+    .navbar-nav {
+        @media screen and(min-width:$large-device) {
+            .nav-link.active {
+                @include greenColor (background, $theme_green_color);
+                @include greenColor (color, $white);
+            }
+        }
+
+        @media screen and(max-width:$large-device) {
+            .nav-link.active {
+                @include greenColor (color, $theme_green_color);
+            }
+        }
+
+        .nav-item {
+            @media screen and(min-width:$large-device) {
+                padding-left: .5rem;
+                padding-right: .5rem;
+            }
+
+            .nav-link {
+                font-size: 18px;
+
+                &:hover {
+                    @include greenColor (background, $theme_green_color);
+                    @include greenColor (color, $white);
+
+                    @media screen and(max-width:$large-device) {
+                        @include greenColor (background, unset);
+                        @include greenColor (color, $theme_green_color);
+                    }
+
+                }
+
+                @media screen and(min-width:$large-device) {
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
